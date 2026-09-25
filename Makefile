@@ -3,21 +3,21 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c99
 
 # Targets
-TARGETS = football_scorer temperature_converter
+TARGETS = task1 task2
 
 # Default target compiles all programs
 all: $(TARGETS)
 
-# Compile football_scorer executable
-football_scorer: football_scorer.c
-	$(CC) $(CFLAGS) -o football_scorer football_scorer.c
+# Compile task1 executable
+task1: task1.c
+	$(CC) $(CFLAGS) -o task1 task1.c
 
-# Compile temperature_converter executable
-temperature_converter: temperature_converter.c
-	$(CC) $(CFLAGS) -o temperature_converter temperature_converter.c
+# Compile task2 executable
+task2: task2.c
+	$(CC) $(CFLAGS) -o task2 task2.c
 
 # Clean up build artifacts and executables
 clean:
-	rm -f $(TARGETS) football_scorer.exe temperature_converter.exe *.o
+	rm -f $(TARGETS) task1.exe task2.exe *.o
 
 .PHONY: all clean
